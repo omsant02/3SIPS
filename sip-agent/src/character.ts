@@ -1,4 +1,3 @@
-// src/character.ts
 import { type Character } from '@elizaos/core';
 
 export const character: Character = {

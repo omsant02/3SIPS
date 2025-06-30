@@ -1,4 +1,3 @@
-// src/plugin.ts
 import { 
   createSIPAction, 
   manageFundsAction, 
@@ -18,9 +17,6 @@ import {
 import { z } from 'zod';
 import { Web3Service } from './services/web3Service.js';
 
-/**
- * Configuration schema for the Web3 SIP plugin
- */
 const configSchema = z.object({
   AI_AGENT_PRIVATE_KEY: z
     .string()
@@ -48,9 +44,6 @@ const configSchema = z.object({
     .optional(),
 });
 
-/**
- * Market Analysis Provider - Provides real-time market insights
- */
 const marketAnalysisProvider: Provider = {
   name: 'MARKET_ANALYSIS',
   description: 'Analyzes cross-chain yield opportunities and market conditions for optimal fund allocation',
@@ -70,11 +63,10 @@ const marketAnalysisProvider: Provider = {
         };
       }
 
-      // Current market analysis (in real implementation, would fetch from oracles/APIs)
-      const echoYieldRate = 5.2; // 5.2% APY
-      const dispatchYieldRate = 3.1; // 3.1% APY
-      const fujiStabilityScore = 95; // 95% stability score
-      const marketVolatility = 'LOW'; // Current market volatility
+      const echoYieldRate = 5.2;
+      const dispatchYieldRate = 3.1;
+      const fujiStabilityScore = 95; 
+      const marketVolatility = 'LOW';
 
       const analysis = `📊 **Current Market Analysis:**
 
@@ -118,9 +110,6 @@ ${marketVolatility === 'LOW' ?
   },
 };
 
-/**
- * Portfolio Status Provider - Provides current portfolio information
- */
 const portfolioStatusProvider: Provider = {
   name: 'PORTFOLIO_STATUS',
   description: 'Provides real-time portfolio status across all chains',
@@ -177,13 +166,10 @@ ${sipProgress ? `• SIP Progress: ${sipProgress.percentComplete}% complete` : '
   },
 };
 
-/**
- * Enhanced Web3 SIP Plugin
- */
 const plugin: Plugin = {
   name: 'web3-sip-manager',
   description: 'AI-powered Web3 SIP manager',
-  priority: 1000, // High priority
+  priority: 1000,
 
   config: {
     AI_AGENT_PRIVATE_KEY: process.env.AI_AGENT_PRIVATE_KEY,
@@ -202,7 +188,6 @@ const plugin: Plugin = {
     try {
       const validatedConfig = await configSchema.parseAsync(config);
 
-      // Set all environment variables
       for (const [key, value] of Object.entries(validatedConfig)) {
         if (value) process.env[key] = value;
       }
@@ -217,13 +202,11 @@ const plugin: Plugin = {
     }
   },
 
-  // Event handlers for real-time monitoring
   events: {
     MESSAGE_RECEIVED: [
       async (params) => {
         const { runtime, message } = params;
         
-        // Log SIP-related messages for analytics
         if (message.content?.text?.toLowerCase().includes('sip')) {
           logger.info('📊 SIP-related message received:', message.content.text.substring(0, 100));
         }
@@ -234,7 +217,6 @@ const plugin: Plugin = {
       async (params) => {
         logger.info('🌍 Web3 SIP Manager connected to world');
         
-        // Initialize Web3 service when connected
         const { runtime } = params;
         try {
           await Web3Service.start(runtime);
@@ -246,10 +228,8 @@ const plugin: Plugin = {
     ],
   },
 
-  // Core services
   services: [Web3Service],
 
-  // SIP management actions
   actions: [
     createSIPAction,
     manageFundsAction,
@@ -258,7 +238,6 @@ const plugin: Plugin = {
     checkStatusAction,
   ],
 
-  // Market and portfolio providers
   providers: [
     marketAnalysisProvider,
     portfolioStatusProvider,

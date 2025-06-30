@@ -1,6 +1,3 @@
-// src/types/contracts.ts
-// Real contract ABIs from your compiled Solidity contracts
-
 export interface ChainConfig {
   chainId: number;
   rpcUrl: string;

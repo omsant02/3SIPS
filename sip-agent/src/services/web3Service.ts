@@ -1,4 +1,3 @@
-// src/services/web3Service.ts
 import { ethers } from 'ethers';
 import { logger, Service, type IAgentRuntime } from '@elizaos/core';
 import type { 

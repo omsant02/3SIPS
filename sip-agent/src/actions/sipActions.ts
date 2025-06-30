@@ -1,4 +1,3 @@
-// src/actions/sipActions.ts
 import type { Action, Content, HandlerCallback, IAgentRuntime, Memory, State } from '@elizaos/core';
 import { logger } from '@elizaos/core';
 import { Web3Service } from '../services/web3Service.js';
