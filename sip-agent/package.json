@@ -1,14 +1,19 @@
 {
   "name": "sip-agent",
-  "description": "Project starter for elizaOS",
+  "description": "AI-powered Web3 SIP Manager with cross-chain capabilities",
   "version": "0.1.0",
   "type": "module",
   "main": "dist/src/index.js",
   "module": "dist/src/index.js",
   "types": "dist/index.d.ts",
   "keywords": [
-    "project",
-    "elizaos"
+    "web3",
+    "sip",
+    "avalanche",
+    "chainlink",
+    "elizaos",
+    "ictt",
+    "defi"
   ],
   "repository": {
     "type": "git",
@@ -33,6 +38,7 @@
     "@elizaos/plugin-sql": "latest",
     "@tanstack/react-query": "^5.29.0",
     "clsx": "^2.1.1",
+    "ethers": "^6.8.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "tailwind-merge": "^2.6.0",

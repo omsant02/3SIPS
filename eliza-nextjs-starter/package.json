@@ -41,7 +41,9 @@
     "@headlessui/react": "^2.2.0",
     "@heroicons/react": "^2.2.0",
     "@libsql/client": "^0.14.0",
+    "@rainbow-me/rainbowkit": "^2.2.8",
     "@tailwindcss/postcss": "^4.0.0-beta.1",
+    "@tanstack/react-query": "^5.81.5",
     "@types/uuid": "^10.0.0",
     "@uiw/codemirror-theme-github": "4.21.19",
     "clsx": "^2.1.1",
@@ -51,7 +53,7 @@
     "eslint-plugin-path-alias": "^2.1.0",
     "evt": "^2.5.9",
     "js-sha1": "^0.7.0",
-    "lucide-react": "^0.468.0",
+    "lucide-react": "^0.525.0",
     "markdown-to-jsx": "^7.7.1",
     "marked": "^15.0.4",
     "next": "^15.3.1",
@@ -63,6 +65,8 @@
     "socket.io-client": "^4.8.1",
     "sonner": "^1.7.1",
     "uuid": "^11.1.0",
+    "viem": "^2.31.4",
+    "wagmi": "^2.15.6",
     "zod": "3.24.2"
   },
   "devDependencies": {
