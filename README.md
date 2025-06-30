@@ -132,18 +132,12 @@ USER_WALLET_ADDRESS=demo_user_address
 
 # Contract Addresses (Pre-deployed)
 SIP_TOKEN_ADDRESS=0xa7E756116aC6b0819e0d7f7354C21417e1e0b2A7
-![image](https://github.com/user-attachments/assets/4f1ddf59-612f-4c2c-8efa-f903347a6070)
-
 
 FUJI_HOME_CONTRACT=0xD3f07713bB0D4816E23Ec66C666E0e7721C3b337
-![image](https://github.com/user-attachments/assets/834dfa6a-3eea-4ecf-ab13-10a36c5fa7a8)
-
 
 ECHO_REMOTE_CONTRACT=0xD3f07713bB0D4816E23Ec66C666E0e7721C3b337
-![image](https://github.com/user-attachments/assets/766e47ea-f3fc-451f-8a38-6ed5a0a8a4d8)
 
 DISPATCH_REMOTE_CONTRACT=0xa7E756116aC6b0819e0d7f7354C21417e1e0b2A7
-![image](https://github.com/user-attachments/assets/f663c709-9967-407a-b085-54efd0652e2d)
 
 
 # RPC Endpoints
@@ -151,6 +145,17 @@ FUJI_RPC_URL=https://api.avax-test.network/ext/bc/C/rpc
 ECHO_RPC_URL=https://subnets.avax.network/echo/testnet/rpc
 DISPATCH_RPC_URL=https://subnets.avax.network/dispatch/testnet/rpc
 ```
+SIP
+![image](https://github.com/user-attachments/assets/4f1ddf59-612f-4c2c-8efa-f903347a6070)
+
+Fuji
+![image](https://github.com/user-attachments/assets/834dfa6a-3eea-4ecf-ab13-10a36c5fa7a8)
+
+ECHO
+![image](https://github.com/user-attachments/assets/766e47ea-f3fc-451f-8a38-6ed5a0a8a4d8)
+
+DISPATCH
+![image](https://github.com/user-attachments/assets/f663c709-9967-407a-b085-54efd0652e2d)
 
 ## 💬 Example Commands
 
